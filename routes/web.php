@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('bowlling', [
+    'uses'  => 'BowllingController@index',
+    'as'    => 'bowlling'
+]);
+
+Route::get('frame/{game_id}/add', 'BowllingController@newFrame');
+Route::get('game/add', 'BowllingController@newGame');
+
+
+
